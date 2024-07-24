@@ -37,6 +37,7 @@
     height: 250px;
     padding-left: 20px; 
     box-shadow: 0 3px 3px black;
+    border-radius: 25px;
 }
 
 .containersub1 h1 {
@@ -54,7 +55,8 @@
     padding: 40px 20px 40px 20px;
     position: absolute;
     right: 15px; 
-    box-shadow: 0 3px 3px black;   
+    box-shadow: 0 3px 3px black;  
+    border-radius: 5px; 
 }
 
 .containersub2:hover {
