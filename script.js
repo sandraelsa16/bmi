@@ -35,20 +35,28 @@ function calculate() {
     var result = "";
     if (bmi < 18.5) {
       result = "Underweight";
-      output.innerHTML = `Your BMI is <span style="color:red; font-weight: bold;">${bmi}</span>  <br> You are <span style="color:red; font-weight: bold;">Underweight☹️</span>`;
+      output.innerHTML = `Your BMI is <span style="color:red; font-weight: bold;">${bmi}</span>  <br> You are <span style="color:red; font-weight: bold;">Underweight!</span>`;
     } else if (18.5 <= bmi && bmi <= 24.9) {
       result = "Healthy";
-      output.innerHTML = `Your BMI is <span style="color:green; font-weight: bold;">${bmi}</span> <br> You are <span style="color:green; font-weight: bold;">Healthy🤩</span>`;
+      output.innerHTML = `Your BMI is <span style="color:green; font-weight: bold;">${bmi}</span> <br> You are <span style="color:green; font-weight: bold;">Healthy!!</span>`;
     } else if (25 <= bmi && bmi <= 29.9) {
       result = "Overweight";
-      output.innerHTML = `Your BMI is <span style="color:orange; font-weight: bold;">${bmi}</span> You are <span style="color:orange; font-weight: bold;">Overweight😕</span>`;
+      output.innerHTML = `Your BMI is <span style="color:orange; font-weight: bold;">${bmi}</span> You are <span style="color:orange; font-weight: bold;">Overweight!</span>`;
     } else if (30 <= bmi && bmi <= 34.9) {
       result = "Obese";
-      output.innerHTML = `Your BMI is <span style="color:yellow; font-weight: bold;">${bmi}</span> You are <span style="color:yellow; font-weight: bold;">Obese😞</span>`;
+      output.innerHTML = `Your BMI is <span style="color:yellow; font-weight: bold;">${bmi}</span> You are <span style="color:yellow; font-weight: bold;">Obese!</span>`;
     } else if (35 <= bmi) {
       result = "Extremely obese";
-      output.innerHTML = `Your BMI is <span style="color:red; font-weight: bold;">${bmi}</span> You are <span style="color:red; font-weight: bold;">Extremely obese!😖</span>`;
+      output.innerHTML = `Your BMI is <span style="color:red; font-weight: bold;">${bmi}</span> You are <span style="color:red; font-weight: bold;">Extremely obese!</span>`;
     }
+          
+          var utterance = new SpeechSynthesisUtterance(output.innerHTML)
+          utterance.lang = 'en-US'
+          utterance.volume = 2
+          utterance.rate = 1
+          utterance.pitch = 1
+
+          window.speechSynthesis.speak(utterance)
 
     // console.log(`bmi:${bmi},result:${result}`);
 }
