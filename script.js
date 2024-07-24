@@ -41,13 +41,13 @@ function calculate() {
       output.innerHTML = `Your BMI is <span style="color:green; font-weight: bold;">${bmi}</span> <br> You are <span style="color:green; font-weight: bold;">Healthy!!</span>`;
     } else if (25 <= bmi && bmi <= 29.9) {
       result = "Overweight";
-      output.innerHTML = `Your BMI is <span style="color:orange; font-weight: bold;">${bmi}</span> You are <span style="color:orange; font-weight: bold;">Overweight!</span>`;
+      output.innerHTML = `Your BMI is <span style="color:orange; font-weight: bold;">${bmi}</span> <br> You are <span style="color:orange; font-weight: bold;">Overweight!</span>`;
     } else if (30 <= bmi && bmi <= 34.9) {
       result = "Obese";
-      output.innerHTML = `Your BMI is <span style="color:yellow; font-weight: bold;">${bmi}</span> You are <span style="color:yellow; font-weight: bold;">Obese!</span>`;
+      output.innerHTML = `Your BMI is <span style="color:yellow; font-weight: bold;">${bmi}</span> <br> You are <span style="color:yellow; font-weight: bold;">Obese!</span>`;
     } else if (35 <= bmi) {
       result = "Extremely obese";
-      output.innerHTML = `Your BMI is <span style="color:red; font-weight: bold;">${bmi}</span> You are <span style="color:red; font-weight: bold;">Extremely obese!</span>`;
+      output.innerHTML = `Your BMI is <span style="color:red; font-weight: bold;">${bmi}</span> <br> You are <span style="color:red; font-weight: bold;">Extremely obese!</span>`;
     }
           
           var utterance = new SpeechSynthesisUtterance(output.innerHTML)
