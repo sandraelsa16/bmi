@@ -44,7 +44,7 @@ function calculate() {
       output.innerHTML = `Your BMI is <span style="color:orange; font-weight: bold;">${bmi}</span> <br> You are <span style="color:orange; font-weight: bold;">Overweight!</span>`;
     } else if (30 <= bmi && bmi <= 34.9) {
       result = "Obese";
-      output.innerHTML = `Your BMI is <span style="color:yellow; font-weight: bold;">${bmi}</span> <br> You are <span style="color:yellow; font-weight: bold;">Obese!</span>`;
+      output.innerHTML = `Your BMI is <span style="color:#FFB22C; font-weight: bold;">${bmi}</span> <br> You are <span style="color:#FFB22C; font-weight: bold;">Obese!</span>`;
     } else if (35 <= bmi) {
       result = "Extremely obese";
       output.innerHTML = `Your BMI is <span style="color:red; font-weight: bold;">${bmi}</span> <br> You are <span style="color:red; font-weight: bold;">Extremely obese!</span>`;
